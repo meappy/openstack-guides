@@ -1,8 +1,8 @@
 ## OpenStack Guides for hosted.meappy.com
 
-#### [OpenStack command-line interface cheat sheet](http://docs.openstack.org/user-guide/cli_cheat_sheet.html)
-
-#### [OpenStack hosted.meappy.com Dashboard](https://secuore.meappy.com/os/)
+##### Links
+- [OpenStack command-line interface cheat sheet](http://docs.openstack.org/user-guide/cli_cheat_sheet.html)
+- [OpenStack hosted.meappy.com Dashboard](https://secuore.meappy.com/os/)
 
 1. SSH to Jump Host<br>
 `[user@local-host ~] ssh -i user_key.pem -p 2233 user@jump-host.hosted.meappy.com`<br>
