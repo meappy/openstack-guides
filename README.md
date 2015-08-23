@@ -12,6 +12,7 @@ Gerald Sim &lt;gerald@meappy.com&gt;<br>
 `[user@local-host ~] ssh -i user_key.pem -p 2233 user@jump-host.hosted.meappy.com`<br>
 
 2. Source Keystone Identity file<br>
+    bin bash
 `[user@jump-host ~]$ source  keystonerc_user`<br>
 `[user@jump-host ~(keystone_user)]$`<br>
 
