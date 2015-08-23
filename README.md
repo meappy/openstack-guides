@@ -15,7 +15,7 @@
 `[user@jump-host ~(keystone_user)]$`<br>
 
 ###### OpenStack openrations after logging into jump-host
-1. Issue Nova command (list Nova instances in project)<br>
+1. List Nova instances in project<br>
 `[user@jump-host ~(keystone_user)]$ nova list`<br>
 `+--------------------------------------+--------------+---------+------------+-------------+-----------------------------+`<br>
 `| ID                                   | Name         | Status  | Task State | Power State | Networks                    |`<br>
@@ -46,10 +46,19 @@
 `| user_key | a8:89:4b:e6:15:1f:77:33:61:03:9d:fd:e4:a9:c4:9c |`<br>
 `+----------+-------------------------------------------------+`<br>
 
-4. Launch instance<br>
-`[user@jump-host ~(keystone_user)]$ nova boot --flavor m1-plus.tiny --key_name user_key --image d6149b97-a006-46e5-9d2e-651fbbae0251 instance1`<br>
+4. List security groups<br>
+`[user@jump-host ~(keystone_user)]$ nova secgroup-list `<br>
+`+--------------------------------------+-----------+------------------------+`<br>
+`| Id                                   | Name      | Description            |`<br>
+`+--------------------------------------+-----------+------------------------+`<br>
+`| 50973d6c-e2dd-496d-9811-57522f70311c | Web + SSH | Web + SSH              |`<br>
+`| 2ed9ba36-42da-4dae-b073-d5caf323721d | default   | Default security group |`<br>
+`+--------------------------------------+-----------+------------------------+`<br>
 
-5. Create floating IP<br>
+5. Launch instance<br>
+`[user@jump-host ~(keystone_user)]$ nova boot --flavor m1-plus.tiny --key_name user_key --image d6149b97-a006-46e5-9d2e-651fbbae0251 --security-groups 'Web + SSH' instance1`<br>
+
+6. Create floating IP<br>
 `[user@jump-host ~(keystone_user)]$ nova floating-ip-create ext`<br>
 `+--------------------------------------+-----------+-----------+----------+------+`<br>
 `| Id                                   | IP        | Server Id | Fixed IP | Pool |`<br>
@@ -57,7 +66,8 @@
 `| c4d13b92-8be9-455a-ba6a-eca5f804fe3c | 10.1.1.70 | -         | -        | ext  |`<br>
 `+--------------------------------------+-----------+-----------+----------+------+`<br>
 
-5. Attach floating IP to newly created instance<br>
+7. Attach floating IP to newly created instance<br>
 `[user@jump-host ~(keystone_user)]$ nova floating-ip-associate instance1 10.1.1.70`<br>
 
+8. SSH into instance from jump-host with private key file
 
