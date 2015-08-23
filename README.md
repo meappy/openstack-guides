@@ -1,4 +1,6 @@
 ## OpenStack Guides for hosted.meappy.com
+Gerald Sim<br>
+gerald@meappy.com<br>
 
 ##### Links
 - [OpenStack command-line interface cheat sheet](http://docs.openstack.org/user-guide/cli_cheat_sheet.html)
@@ -26,7 +28,7 @@
 `| 2f5e5fca-4128-4a74-b6ec-d103b2b9e932 | instance5    | ACTIVE  | -          | Running     | int=192.168.1.9             |`<br>
 `+--------------------------------------+--------------+---------+------------+-------------+-----------------------------+`<br>
 
-2. List avaialble images<br>
+2. List available images<br>
 `[user@jump-host ~(keystone_user)]$ glance image-list`<br>
 `+--------------------------------------+------------------------------------------+-------------+------------------+------------+--------+`<br>
 `| ID                                   | Name                                     | Disk Format | Container Format | Size       | Status |`<br>
