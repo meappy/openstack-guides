@@ -69,5 +69,10 @@
 7. Attach floating IP to newly created instance<br>
 `[user@jump-host ~(keystone_user)]$ nova floating-ip-associate instance1 10.1.1.70`<br>
 
-8. SSH into instance from jump-host with private key file
-
+8. SSH into instance from jump-host with private key file<br>
+`[user@jump-host ~(keystone_user)]$ ssh -i .ssh/user_key.pem centos@10.1.1.70`<br>
+`The authenticity of host '10.1.1.70 (10.1.1.70)' can't be established.`<br>
+`ECDSA key fingerprint is 41:4a:f1:21:cb:e5:a6:62:92:f9:ea:6d:a6:7f:37:49.`<br>
+`Are you sure you want to continue connecting (yes/no)? yes`<br>
+`Warning: Permanently added '10.1.1.70' (ECDSA) to the list of known hosts.`<br>
+`[centos@instance2 ~]$`<br>
