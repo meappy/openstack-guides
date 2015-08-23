@@ -3,7 +3,7 @@
 ##### Links
 - [OpenStack command-line interface cheat sheet](http://docs.openstack.org/user-guide/cli_cheat_sheet.html)
 - [ Floating IPs](http://docs.openstack.org/openstack-ops/content/floating_ips.html)
-- [OpenStack hosted.meappy.com Dashboard](https://secuore.meappy.com/os/)
+- [OpenStack hosted.meappy.com Dashboard](https://secure.meappy.com/os/)
 
 ##### Basic Operations
 ###### Connecting to jump-host
