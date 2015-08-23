@@ -10,8 +10,8 @@
 [user@jump-host ~(keystone_user)]$ 
 
 3. Issue Nova commands
-`[user@jump-host ~(keystone_user)]$
-[user@jump-host ~(keystone_user)]$ nova list
+`[user@jump-host ~(keystone_user)]$`<br>
+`[user@jump-host ~(keystone_user)]$ nova list`<br>
 +--------------------------------------+--------------+---------+------------+-------------+-----------------------------+
 | ID                                   | Name         | Status  | Task State | Power State | Networks                    |
 +--------------------------------------+--------------+---------+------------+-------------+-----------------------------+
