@@ -5,7 +5,7 @@
 - [OpenStack hosted.meappy.com Dashboard](https://secuore.meappy.com/os/)
 
 ##### Basic Operations
-###### COnnecting to jump-host
+###### Connecting to jump-host
 1. SSH<br>
 `[user@local-host ~] ssh -i user_key.pem -p 2233 user@jump-host.hosted.meappy.com`<br>
 
@@ -13,7 +13,7 @@
 `[user@jump-host ~]$ source  keystonerc_user`<br>
 `[user@jump-host ~(keystone_user)]$`<br>
 
-###### OpenStack Openrations after logging into jump-host
+###### OpenStack openrations after logging into jump-host
 1. Issue Nova command (list Nova instances in project)<br>
 `[user@jump-host ~(keystone_user)]$ nova list`<br>
 `+--------------------------------------+--------------+---------+------------+-------------+-----------------------------+`<br>
@@ -24,6 +24,19 @@
 `| 20736923-b1b4-4a49-898c-63fdc007d4d6 | centos6-2    | ACTIVE  | -          | Running     | int=192.168.1.11, 10.1.1.65 |`<br>
 `| 2f5e5fca-4128-4a74-b6ec-d103b2b9e932 | instance5    | ACTIVE  | -          | Running     | int=192.168.1.9             |`<br>
 `+--------------------------------------+--------------+---------+------------+-------------+-----------------------------+`<br>
+
+2. List avaialble images
+`[user@jump-host ~(keystone_user)]$ glance image-list
++--------------------------------------+------------------------------------------+-------------+------------------+------------+--------+
+| ID                                   | Name                                     | Disk Format | Container Format | Size       | Status |
++--------------------------------------+------------------------------------------+-------------+------------------+------------+--------+
+| d618db8e-abd8-452c-8802-5b03a7425cf5 | CentOS-6-x86_64-GenericCloud-20141129_01 | qcow2       | bare             | 1151533056 | active |
+| 6cb73530-a737-4a22-853b-73a9f77a74e0 | CentOS-7-x86_64-GenericCloud-1503        | qcow2       | bare             | 1004994560 | active |
+| d6149b97-a006-46e5-9d2e-651fbbae0251 | CentOS-Atomic-Host-7-GenericCloud        | qcow2       | bare             | 916848640  | active |
+| 0c39fed9-2472-49c8-bda0-7af9673ec576 | centos6-snapshot                         | qcow2       | bare             | 1275789312 | active |
+| 60aa11ac-1841-4528-9295-6e244e3e3489 | CoreOS                                   | qcow2       | bare             | 493813760  | active |
+| c2e6a16e-e777-4d9a-8a10-737ed974c67c | image1                                   | qcow2       | bare             | 356777984  | active |
++--------------------------------------+------------------------------------------+-------------+------------------+------------+--------+`
 
 2. Launch instance<br>
 `[user@jump-host ~(keystone_user)]$ nova boot --flavor m1-plus.tiny --key_name user_key --image d6149b97-a006-46e5-9d2e-651fbbae0251 instance1`<br>
