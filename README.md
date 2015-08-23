@@ -80,8 +80,10 @@ Gerald Sim &lt;gerald@meappy.com&gt;<br>
 `[centos@instance1 ~]$`<br>
 
 9. SSH directly into instance from local machine, via jump-host<br>
-`[user@local-host ~] ssh -i user_key1.pem -tt -p 2233 user@jump-host.hosted.meappy.com  ssh -i .ssh/user_key1.pem -tt centos@10.1.1.70`<br>
-`[centos@instance1 ~]$`<br>
+```no-highlight
+[user@local-host ~] ssh -i user_key1.pem -tt -p 2233 user@jump-host.hosted.meappy.com  ssh -i .ssh/user_key1.pem -tt centos@10.1.1.70
+[centos@instance1 ~]$
+```
 
 
 hello
