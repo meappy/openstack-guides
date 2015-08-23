@@ -69,22 +69,16 @@ Gerald Sim &lt;gerald@meappy.com&gt;<br>
 `+--------------------------------------+-----------+-----------+----------+------+`<br>
 
 7. Attach floating IP to newly created instance<br>
-```no-highlight
-[user@jump-host ~(keystone_user)]$ nova floating-ip-associate instance1 10.1.1.70
-```
+`[user@jump-host ~(keystone_user)]$ nova floating-ip-associate instance1 10.1.1.70`<br>
 
 8. SSH into instance from jump-host with private key file<br>
-```no-highlight
-[user@jump-host ~(keystone_user)]$ ssh -i .ssh/user_key.pem centos@10.1.1.70
-The authenticity of host '10.1.1.70 (10.1.1.70)' can't be established.
-ECDSA key fingerprint is 41:4a:f1:21:cb:e5:a6:62:92:f9:ea:6d:a6:7f:37:49.
-Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added '10.1.1.70' (ECDSA) to the list of known hosts.
-[centos@instance1 ~]$
-```
+`[user@jump-host ~(keystone_user)]$ ssh -i .ssh/user_key.pem centos@10.1.1.70`<br>
+`The authenticity of host '10.1.1.70 (10.1.1.70)' can't be established.`<br>
+`ECDSA key fingerprint is 41:4a:f1:21:cb:e5:a6:62:92:f9:ea:6d:a6:7f:37:49.`<br>
+`Are you sure you want to continue connecting (yes/no)? yes`<br>
+`Warning: Permanently added '10.1.1.70' (ECDSA) to the list of known hosts.`<br>
+`[centos@instance1 ~]$`<br>
 
 9. SSH directly into instance from local machine, via jump-host<br>
-```no-highlight
-[user@local-host ~] ssh -i user_key1.pem -tt -p 2233 user@jump-host.hosted.meappy.com  ssh -i .ssh/user_key1.pem -tt centos@10.1.1.70
-[centos@instance1 ~]$
-```
+`[user@local-host ~] ssh -i user_key1.pem -tt -p 2233 user@jump-host.hosted.meappy.com  ssh -i .ssh/user_key1.pem -tt centos@10.1.1.70`<br>
+`[centos@instance1 ~]$`<br>
