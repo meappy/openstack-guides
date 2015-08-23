@@ -1,6 +1,5 @@
 ## OpenStack Guides for hosted.meappy.com
-Gerald Sim<br>
-gerald@meappy.com<br>
+Gerald Sim <gerald@meappy.com><br>
 
 ##### Links
 - [OpenStack command-line interface cheat sheet](http://docs.openstack.org/user-guide/cli_cheat_sheet.html)
