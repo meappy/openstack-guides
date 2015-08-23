@@ -67,6 +67,8 @@ Gerald Sim &lt;gerald@meappy.com&gt;<br>
 `+--------------------------------------+-----------+-----------+----------+------+`<br>
 `| c4d13b92-8be9-455a-ba6a-eca5f804fe3c | 10.1.1.70 | -         | -        | ext  |`<br>
 `+--------------------------------------+-----------+-----------+----------+------+`<br>
+hello
+world
 
 7. Attach floating IP to newly created instance<br>
 `[user@jump-host ~(keystone_user)]$ nova floating-ip-associate instance1 10.1.1.70`<br>
