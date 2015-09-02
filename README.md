@@ -82,3 +82,17 @@ Gerald Sim &lt;gerald@meappy.com&gt;<br>
 9. SSH directly into instance from local machine, via jump-host<br>
 `[user@local-host ~] ssh -i user_key1.pem -tt -p 2233 user@jump-host.hosted.meappy.com  ssh -i .ssh/user_key1.pem -tt centos@10.1.1.70`<br>
 `[centos@instance1 ~]$`<br>
+
+
+###### Side notes
+1. If you get a message like this 
+`# nova boot --flavor m1-plus.tiny --key_name key1 --image d618db8e-abd8-452c-8802-5b03a7425cf5 test-centos6`<br>
+`ERROR (BadRequest): Multiple possible networks found, use a Network ID to be more specific. (HTTP 400) (Request-ID: req-b374145d-1cfd-458a-941e-bd0af74ab8f8)`<br>
+
+`# neutron subnet-list`
+`+--------------------------------------+--------+----------------+--------------------------------------------------+`
+`| id                                   | name   | cidr           | allocation_pools                                 |`
+`+--------------------------------------+--------+----------------+--------------------------------------------------+`
+`| 07ba8cb8-54b4-41b4-8722-72280244f95f | subext | 10.1.1.0/24    | {"start": "10.1.1.55", "end": "10.1.1.155"}      |`
+`| 347d6eb8-7ee3-4ec9-aec0-38f82d1a7474 | subint | 192.168.0.0/24 | {"start": "192.168.0.2", "end": "192.168.0.254"} |`
+`+--------------------------------------+--------+----------------+--------------------------------------------------+ `
